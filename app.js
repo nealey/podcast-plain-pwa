@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const durationTags = [
       "itunes\\:duration",
       "duration",
-      "media:content duration",
+      "media\\:content duration",
     ];
     for (const tag of durationTags) {
       const durationElement = item.querySelector(tag);
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Register the service worker
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/service-worker.js")
+      .register("./service-worker.js")
       .then((registration) => {
         console.log(
           "Service Worker registered with scope:",
